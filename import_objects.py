@@ -12,8 +12,6 @@ visuals_json = config.get("kibana", "visualizations")
 dashboards_json = config.get("kibana", "dashboards")
 searches_json = config.get("kibana", "searches")
 
-
-
 with open(visuals_json) as data_file:
     print "Visualizations Start"
     data = json.load(data_file)
