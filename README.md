@@ -8,3 +8,5 @@ Imports Kibana visualizations, searches, and dashboards to be used by others or 
 4. run python import_objects.py
 
 You should then see that it imports all of the ojects specified.  This was written to be a part of a bigger script.  But can still be used and customized as needed.
+
+**More to add.  Still WIP**
