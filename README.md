@@ -1,6 +1,6 @@
 # Kibana Objects Import
 
-Imports Kibana visualizations, searches, and dashboards
+Imports Kibana visualizations, searches, and dashboards to be used by others or migrated.
 
 1. Clone this repo in your ES environment
 2. Export relevant dashboard, visualizations, searches vi Kibana UI
