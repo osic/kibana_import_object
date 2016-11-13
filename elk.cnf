@@ -1,0 +1,5 @@
+[kibana]
+host=http://localhost:9200/.kibana/
+visualizations=json/visual.json
+dashboards=json/dashboard.json
+searches=json/search.json

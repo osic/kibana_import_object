@@ -1,0 +1,40 @@
+[
+  {
+    "_id": "test_dash",
+    "_type": "dashboard",
+    "_source": {
+      "title": "Test Dash",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"col\":4,\"id\":\"Average-Time-Create-1-Server\",\"panelIndex\":18,\"row\":2,\"size_x\":6,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Overall-Average-Time-Create-1-Server\",\"panelIndex\":20,\"row\":2,\"size_x\":3,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Overall-Average-Time-Create-5-Server\",\"panelIndex\":21,\"row\":10,\"size_x\":3,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Create-1-Server-Success-%-per-Day\",\"panelIndex\":28,\"row\":4,\"size_x\":12,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Create-5-Servers-Success-%-per-Day\",\"panelIndex\":29,\"row\":12,\"size_x\":12,\"size_y\":2,\"type\":\"visualization\"},{\"col\":10,\"id\":\"Overall-Success-%-1-Server\",\"panelIndex\":30,\"row\":1,\"size_x\":3,\"size_y\":3,\"type\":\"visualization\"},{\"col\":10,\"id\":\"Overall-Success-%-5-Server\",\"panelIndex\":31,\"row\":9,\"size_x\":3,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Average-Create-1-Server-Time-10w-vs-1w\",\"panelIndex\":34,\"row\":6,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Average-Create-5-Servers-Time-10w-vs-1w\",\"panelIndex\":35,\"row\":14,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":4,\"id\":\"Average-Times-for-Creating-5-Servers\",\"panelIndex\":36,\"row\":10,\"size_x\":6,\"size_y\":2,\"type\":\"visualization\"},{\"col\":7,\"id\":\"Overall-50th-slash-95th-slash-Avg-Create-1-Server-Time\",\"panelIndex\":37,\"row\":6,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":7,\"id\":\"Overall-50th-slash-95th-slash-Avg-Create-5-Servers-Time\",\"panelIndex\":38,\"row\":14,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Create-5-Servers-Metrics\",\"panelIndex\":39,\"row\":9,\"size_x\":9,\"size_y\":1,\"type\":\"visualization\"},{\"id\":\"Create-1-Servers-Metrics\",\"type\":\"visualization\",\"panelIndex\":40,\"size_x\":9,\"size_y\":1,\"col\":1,\"row\":1}]",
+      "optionsJSON": "{\"darkTheme\":true}",
+      "uiStateJSON": "{\"P-18\":{\"vis\":{\"legendOpen\":false}},\"P-24\":{\"vis\":{\"legendOpen\":false}},\"P-30\":{\"vis\":{\"legendOpen\":false}},\"P-31\":{\"vis\":{\"legendOpen\":false}},\"P-36\":{\"vis\":{\"legendOpen\":false}},\"P-38\":{\"vis\":{\"legendOpen\":false}}}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "now",
+      "timeFrom": "now-4w",
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}}}]}"
+      }
+    }
+  },
+  {
+    "_id": "test_dash2",
+    "_type": "dashboard",
+    "_source": {
+      "title": "Test Dash Script",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"col\":4,\"id\":\"Average-Time-Create-1-Server\",\"panelIndex\":18,\"row\":2,\"size_x\":6,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Overall-Average-Time-Create-1-Server\",\"panelIndex\":20,\"row\":2,\"size_x\":3,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Overall-Average-Time-Create-5-Server\",\"panelIndex\":21,\"row\":10,\"size_x\":3,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Create-1-Server-Success-%-per-Day\",\"panelIndex\":28,\"row\":4,\"size_x\":12,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Create-5-Servers-Success-%-per-Day\",\"panelIndex\":29,\"row\":12,\"size_x\":12,\"size_y\":2,\"type\":\"visualization\"},{\"col\":10,\"id\":\"Overall-Success-%-1-Server\",\"panelIndex\":30,\"row\":1,\"size_x\":3,\"size_y\":3,\"type\":\"visualization\"},{\"col\":10,\"id\":\"Overall-Success-%-5-Server\",\"panelIndex\":31,\"row\":9,\"size_x\":3,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Average-Create-1-Server-Time-10w-vs-1w\",\"panelIndex\":34,\"row\":6,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Average-Create-5-Servers-Time-10w-vs-1w\",\"panelIndex\":35,\"row\":14,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":4,\"id\":\"Average-Times-for-Creating-5-Servers\",\"panelIndex\":36,\"row\":10,\"size_x\":6,\"size_y\":2,\"type\":\"visualization\"},{\"col\":7,\"id\":\"Overall-50th-slash-95th-slash-Avg-Create-1-Server-Time\",\"panelIndex\":37,\"row\":6,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":7,\"id\":\"Overall-50th-slash-95th-slash-Avg-Create-5-Servers-Time\",\"panelIndex\":38,\"row\":14,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Create-5-Servers-Metrics\",\"panelIndex\":39,\"row\":9,\"size_x\":9,\"size_y\":1,\"type\":\"visualization\"},{\"id\":\"Create-1-Servers-Metrics\",\"type\":\"visualization\",\"panelIndex\":40,\"size_x\":9,\"size_y\":1,\"col\":1,\"row\":1}]",
+      "optionsJSON": "{\"darkTheme\":true}",
+      "uiStateJSON": "{\"P-18\":{\"vis\":{\"legendOpen\":false}},\"P-24\":{\"vis\":{\"legendOpen\":false}},\"P-30\":{\"vis\":{\"legendOpen\":false}},\"P-31\":{\"vis\":{\"legendOpen\":false}},\"P-36\":{\"vis\":{\"legendOpen\":false}},\"P-38\":{\"vis\":{\"legendOpen\":false}}}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "now",
+      "timeFrom": "now-4w",
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}}}]}"
+      }
+    }
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "_id": "Compute-Cleanup",
+    "_type": "visualization",
+    "_source": {
+      "title": "Compute Cleanup",
+      "visState": "{\"title\":\"New Visualization\",\"type\":\"heatmap\",\"params\":{\"margin\":{\"top\":20,\"right\":200,\"bottom\":100,\"left\":100},\"stroke\":\"#ffffff\",\"strokeWidth\":1,\"padding\":0,\"legendNumberFormat\":\"number\",\"color\":\"YlGn\",\"numberOfColors\":6,\"rowAxis\":{\"filterBy\":0,\"title\":\"\"},\"columnAxis\":{\"filterBy\":0,\"title\":\"\"},\"legendTitle\":\"Compute Cleanup\"},\"aggs\":[{\"id\":\"1\",\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"compute_resources_cleanup\",\"customLabel\":\"Compute Cleanup\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"osa_onmetal_upgrade\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "Compute-Create",
+    "_type": "visualization",
+    "_source": {
+      "title": "Compute Create",
+      "visState": "{\"title\":\"Compute Cleanup\",\"type\":\"heatmap\",\"params\":{\"margin\":{\"top\":20,\"right\":200,\"bottom\":100,\"left\":100},\"stroke\":\"#ffffff\",\"strokeWidth\":1,\"padding\":0,\"legendNumberFormat\":\"number\",\"color\":\"YlGn\",\"numberOfColors\":6,\"rowAxis\":{\"filterBy\":0,\"title\":\"\"},\"columnAxis\":{\"filterBy\":0,\"title\":\"\"},\"legendTitle\":\"Compute Create\"},\"aggs\":[{\"id\":\"1\",\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"compute_resources_create\",\"customLabel\":\"Compute Create\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"osa_onmetal_upgrade\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}},\"filter\":[]}"
+      }
+    }
+  }
+]
