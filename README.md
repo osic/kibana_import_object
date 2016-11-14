@@ -5,9 +5,7 @@ Imports Kibana visualizations, searches, and dashboards to be used by others or 
 1. Clone this repo in your ES environment
 2. Make sure relevant dashboard, visualizations, searches are exported and location is noted
 3. Customize elk.cnf folder for location of exports (file name and location) if you choose to pull from here
-4. run - python import_objects.py
-
-        No parameters means it will just pull from the config file
+4. run - python import_objects.py - No parameters means it will just pull from the config file
  
 You can also also specify parameters command line to specifiy file location and/or host of ES.
 
