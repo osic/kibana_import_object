@@ -8,7 +8,7 @@ from ConfigParser import SafeConfigParser
 class ArgumentParser(argparse.ArgumentParser):
     def __init__(self):
         desc = "Accepts search, dashboard, and visualization json from Kibana.  Pushes to ES."
-        usage_string = "[-s/--search] ([-d/--dashboard] | [-v/--visual]) [-o/--output-file]"
+        usage_string = "[-s/--search] ([-d/--dashboard] | [-v/--visual]) [-o/--output-file]  [-h/--host]"
 
         super (ArgumentParser, self).__init__(
             usage=usage_string, description=desc)
@@ -24,6 +24,10 @@ class ArgumentParser(argparse.ArgumentParser):
         self.add_argument(
             "-v", "--visual", metavar="<json file with visualizations>",
             required=False, default=None)
+            
+        self.add_argument(
+            "-h", "--host", metavar="<host url where ES lives>",
+            required=False, default=None)
 
         self.add_argument(
             "-o", "--output-file", metavar="<path to output file>",
@@ -37,7 +41,7 @@ def entry_point():
     # Initialize Config Variables
     config = SafeConfigParser()
     config.read("elk.cnf")
-    host = cl_args.output_file or config.get("kibana", "host")
+    host = cl_args.host or config.get("kibana", "host")
     visuals_json = cl_args.visual or config.get("kibana", "visualizations")
     dashboards_json = cl_args.dashboard or config.get("kibana", "dashboards")
     searches_json = cl_args.search or config.get("kibana", "searches")
