@@ -7,7 +7,7 @@ Imports Kibana visualizations, searches, and dashboards to be used by others or 
 3. Customize elk.cnf folder for location of exports (file name and location) if you choose to pull from here
 4. run - python import_objects.py - No parameters means it will just pull from the config file
  
-You can also also specify parameters command line to specifiy file location and/or host of ES.
+You can also specify parameters in the command.
 
     python import_objects.py -s json/search.json -d json/dashboard.json -v json/visual.json
 
