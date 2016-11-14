@@ -1,37 +1,92 @@
 [
   {
-    "_id": "test_dash",
+    "_id": "Smoke-and-Persistence-Results",
     "_type": "dashboard",
     "_source": {
-      "title": "Test Dash",
+      "title": "Smoke and Persistence Results",
       "hits": 0,
       "description": "",
-      "panelsJSON": "[{\"col\":4,\"id\":\"Average-Time-Create-1-Server\",\"panelIndex\":18,\"row\":2,\"size_x\":6,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Overall-Average-Time-Create-1-Server\",\"panelIndex\":20,\"row\":2,\"size_x\":3,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Overall-Average-Time-Create-5-Server\",\"panelIndex\":21,\"row\":10,\"size_x\":3,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Create-1-Server-Success-%-per-Day\",\"panelIndex\":28,\"row\":4,\"size_x\":12,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Create-5-Servers-Success-%-per-Day\",\"panelIndex\":29,\"row\":12,\"size_x\":12,\"size_y\":2,\"type\":\"visualization\"},{\"col\":10,\"id\":\"Overall-Success-%-1-Server\",\"panelIndex\":30,\"row\":1,\"size_x\":3,\"size_y\":3,\"type\":\"visualization\"},{\"col\":10,\"id\":\"Overall-Success-%-5-Server\",\"panelIndex\":31,\"row\":9,\"size_x\":3,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Average-Create-1-Server-Time-10w-vs-1w\",\"panelIndex\":34,\"row\":6,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Average-Create-5-Servers-Time-10w-vs-1w\",\"panelIndex\":35,\"row\":14,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":4,\"id\":\"Average-Times-for-Creating-5-Servers\",\"panelIndex\":36,\"row\":10,\"size_x\":6,\"size_y\":2,\"type\":\"visualization\"},{\"col\":7,\"id\":\"Overall-50th-slash-95th-slash-Avg-Create-1-Server-Time\",\"panelIndex\":37,\"row\":6,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":7,\"id\":\"Overall-50th-slash-95th-slash-Avg-Create-5-Servers-Time\",\"panelIndex\":38,\"row\":14,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Create-5-Servers-Metrics\",\"panelIndex\":39,\"row\":9,\"size_x\":9,\"size_y\":1,\"type\":\"visualization\"},{\"id\":\"Create-1-Servers-Metrics\",\"type\":\"visualization\",\"panelIndex\":40,\"size_x\":9,\"size_y\":1,\"col\":1,\"row\":1}]",
+      "panelsJSON": "[{\"col\":8,\"id\":\"Compute-Resource-Validation\",\"panelIndex\":8,\"row\":4,\"size_x\":4,\"size_y\":1,\"type\":\"visualization\"},{\"col\":7,\"id\":\"Compute-Resource-Cleanup\",\"panelIndex\":11,\"row\":1,\"size_x\":2,\"size_y\":3,\"type\":\"visualization\"},{\"col\":7,\"id\":\"Compute-Resource-Create\",\"panelIndex\":12,\"row\":5,\"size_x\":6,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Persistence-Compute-Results\",\"panelIndex\":18,\"row\":1,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"API-High-Level-Results\",\"panelIndex\":19,\"row\":4,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"During-High-Level-Results\",\"panelIndex\":20,\"row\":7,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":9,\"id\":\"Smoke-Test\",\"panelIndex\":21,\"row\":1,\"size_x\":4,\"size_y\":3,\"type\":\"visualization\"}]",
       "optionsJSON": "{\"darkTheme\":true}",
-      "uiStateJSON": "{\"P-18\":{\"vis\":{\"legendOpen\":false}},\"P-24\":{\"vis\":{\"legendOpen\":false}},\"P-30\":{\"vis\":{\"legendOpen\":false}},\"P-31\":{\"vis\":{\"legendOpen\":false}},\"P-36\":{\"vis\":{\"legendOpen\":false}},\"P-38\":{\"vis\":{\"legendOpen\":false}}}",
+      "uiStateJSON": "{\"P-18\":{\"spy\":{\"mode\":{\"fill\":false,\"name\":null}}},\"P-21\":{\"spy\":{\"mode\":{\"fill\":false,\"name\":null}}}}",
       "version": 1,
-      "timeRestore": true,
-      "timeTo": "now",
-      "timeFrom": "now-4w",
+      "timeRestore": false,
       "kibanaSavedObjectMeta": {
         "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}}}]}"
       }
     }
   },
   {
-    "_id": "test_dash2",
+    "_id": "Overview-Upgrade-Results",
     "_type": "dashboard",
     "_source": {
-      "title": "Test Dash Script",
+      "title": "Overview Upgrade Results",
       "hits": 0,
       "description": "",
-      "panelsJSON": "[{\"col\":4,\"id\":\"Average-Time-Create-1-Server\",\"panelIndex\":18,\"row\":2,\"size_x\":6,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Overall-Average-Time-Create-1-Server\",\"panelIndex\":20,\"row\":2,\"size_x\":3,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Overall-Average-Time-Create-5-Server\",\"panelIndex\":21,\"row\":10,\"size_x\":3,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Create-1-Server-Success-%-per-Day\",\"panelIndex\":28,\"row\":4,\"size_x\":12,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Create-5-Servers-Success-%-per-Day\",\"panelIndex\":29,\"row\":12,\"size_x\":12,\"size_y\":2,\"type\":\"visualization\"},{\"col\":10,\"id\":\"Overall-Success-%-1-Server\",\"panelIndex\":30,\"row\":1,\"size_x\":3,\"size_y\":3,\"type\":\"visualization\"},{\"col\":10,\"id\":\"Overall-Success-%-5-Server\",\"panelIndex\":31,\"row\":9,\"size_x\":3,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Average-Create-1-Server-Time-10w-vs-1w\",\"panelIndex\":34,\"row\":6,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Average-Create-5-Servers-Time-10w-vs-1w\",\"panelIndex\":35,\"row\":14,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":4,\"id\":\"Average-Times-for-Creating-5-Servers\",\"panelIndex\":36,\"row\":10,\"size_x\":6,\"size_y\":2,\"type\":\"visualization\"},{\"col\":7,\"id\":\"Overall-50th-slash-95th-slash-Avg-Create-1-Server-Time\",\"panelIndex\":37,\"row\":6,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":7,\"id\":\"Overall-50th-slash-95th-slash-Avg-Create-5-Servers-Time\",\"panelIndex\":38,\"row\":14,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Create-5-Servers-Metrics\",\"panelIndex\":39,\"row\":9,\"size_x\":9,\"size_y\":1,\"type\":\"visualization\"},{\"id\":\"Create-1-Servers-Metrics\",\"type\":\"visualization\",\"panelIndex\":40,\"size_x\":9,\"size_y\":1,\"col\":1,\"row\":1}]",
+      "panelsJSON": "[{\"col\":1,\"id\":\"Persistence-Compute-Results\",\"panelIndex\":18,\"row\":5,\"size_x\":12,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"API-High-Level-Results\",\"panelIndex\":19,\"row\":8,\"size_x\":12,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"During-High-Level-Results\",\"panelIndex\":20,\"row\":11,\"size_x\":12,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Smoke-Test\",\"panelIndex\":21,\"row\":2,\"size_x\":12,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Test-Results\",\"panelIndex\":23,\"row\":1,\"size_x\":12,\"size_y\":1,\"type\":\"visualization\"}]",
       "optionsJSON": "{\"darkTheme\":true}",
-      "uiStateJSON": "{\"P-18\":{\"vis\":{\"legendOpen\":false}},\"P-24\":{\"vis\":{\"legendOpen\":false}},\"P-30\":{\"vis\":{\"legendOpen\":false}},\"P-31\":{\"vis\":{\"legendOpen\":false}},\"P-36\":{\"vis\":{\"legendOpen\":false}},\"P-38\":{\"vis\":{\"legendOpen\":false}}}",
+      "uiStateJSON": "{\"P-18\":{\"spy\":{\"mode\":{\"fill\":false,\"name\":null}}},\"P-21\":{\"spy\":{\"mode\":{\"fill\":false,\"name\":null}}}}",
       "version": 1,
       "timeRestore": true,
       "timeTo": "now",
-      "timeFrom": "now-4w",
+      "timeFrom": "now-3d",
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}}}]}"
+      }
+    }
+  },
+  {
+    "_id": "OverviewResults",
+    "_type": "dashboard",
+    "_source": {
+      "title": "OverviewResults",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"col\":7,\"id\":\"Persistence-Compute-Results\",\"panelIndex\":18,\"row\":5,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":7,\"id\":\"API-High-Level-Results\",\"panelIndex\":19,\"row\":8,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"During-High-Level-Results\",\"panelIndex\":20,\"row\":5,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Smoke-Test\",\"panelIndex\":21,\"row\":11,\"size_x\":12,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Test-Results\",\"panelIndex\":23,\"row\":3,\"size_x\":9,\"size_y\":2,\"type\":\"visualization\"},{\"col\":10,\"id\":\"Time-Widget\",\"panelIndex\":24,\"row\":3,\"size_x\":3,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Persistence-Object-Storage-Results\",\"panelIndex\":25,\"row\":8,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Number-of-Runs-being-Measured\",\"panelIndex\":26,\"row\":13,\"size_x\":12,\"size_y\":1,\"type\":\"visualization\"},{\"col\":1,\"columns\":[\"compute_resources_after-validate\"],\"id\":\"Upgrade-Search\",\"panelIndex\":27,\"row\":1,\"size_x\":12,\"size_y\":2,\"sort\":[\"done_time\",\"desc\"],\"type\":\"search\"}]",
+      "optionsJSON": "{\"darkTheme\":true}",
+      "uiStateJSON": "{\"P-21\":{\"spy\":{\"mode\":{\"fill\":false,\"name\":null}}},\"P-25\":{\"spy\":{\"mode\":{\"fill\":false,\"name\":null}}}}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "now",
+      "timeFrom": "now-7d",
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}}}]}"
+      }
+    }
+  },
+  {
+    "_id": "Overview-Results",
+    "_type": "dashboard",
+    "_source": {
+      "title": "Overview Results",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"col\":7,\"id\":\"Persistence-Compute-Results\",\"panelIndex\":18,\"row\":5,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":7,\"id\":\"API-High-Level-Results\",\"panelIndex\":19,\"row\":8,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"During-High-Level-Results\",\"panelIndex\":20,\"row\":5,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Smoke-Test\",\"panelIndex\":21,\"row\":11,\"size_x\":12,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Test-Results\",\"panelIndex\":23,\"row\":3,\"size_x\":9,\"size_y\":2,\"type\":\"visualization\"},{\"col\":10,\"id\":\"Time-Widget\",\"panelIndex\":24,\"row\":3,\"size_x\":3,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Persistence-Object-Storage-Results\",\"panelIndex\":25,\"row\":8,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Number-of-Runs-being-Measured\",\"panelIndex\":26,\"row\":13,\"size_x\":12,\"size_y\":1,\"type\":\"visualization\"},{\"col\":1,\"columns\":[\"compute_resources_after-validate\"],\"id\":\"Upgrade-Search\",\"panelIndex\":27,\"row\":1,\"size_x\":12,\"size_y\":2,\"sort\":[\"done_time\",\"desc\"],\"type\":\"search\"}]",
+      "optionsJSON": "{\"darkTheme\":true}",
+      "uiStateJSON": "{\"P-21\":{\"spy\":{\"mode\":{\"fill\":false,\"name\":null}}},\"P-25\":{\"spy\":{\"mode\":{\"fill\":false,\"name\":null}}}}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "now",
+      "timeFrom": "now-7d",
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}}}]}"
+      }
+    }
+  },
+  {
+    "_id": "Upgrade-Dash-Dev",
+    "_type": "dashboard",
+    "_source": {
+      "title": "Upgrade Dash Dev",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"col\":1,\"id\":\"Nova-Uptime\",\"panelIndex\":2,\"row\":5,\"size_x\":3,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Swift-Uptime\",\"panelIndex\":3,\"row\":2,\"size_x\":3,\"size_y\":3,\"type\":\"visualization\"},{\"col\":4,\"id\":\"Nova-API-Total-Runs-vs-Successful\",\"panelIndex\":5,\"row\":5,\"size_x\":3,\"size_y\":3,\"type\":\"visualization\"},{\"col\":4,\"id\":\"Swift-API-Total-Runs-vs-Successful\",\"panelIndex\":6,\"row\":2,\"size_x\":3,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"API-Uptime-Test-Results\",\"panelIndex\":7,\"row\":1,\"size_x\":6,\"size_y\":1,\"type\":\"visualization\"},{\"col\":7,\"id\":\"Keystone-During\",\"panelIndex\":8,\"row\":2,\"size_x\":3,\"size_y\":2,\"type\":\"visualization\"},{\"col\":7,\"id\":\"Nova-During\",\"panelIndex\":9,\"row\":6,\"size_x\":3,\"size_y\":2,\"type\":\"visualization\"},{\"col\":7,\"id\":\"Swift-During\",\"panelIndex\":10,\"row\":4,\"size_x\":3,\"size_y\":2,\"type\":\"visualization\"},{\"col\":10,\"id\":\"Keystone-During-Total-Runs-vs-Successful\",\"panelIndex\":11,\"row\":2,\"size_x\":3,\"size_y\":2,\"type\":\"visualization\"},{\"col\":10,\"id\":\"Nova-During-Total-Runs-vs-Successful\",\"panelIndex\":12,\"row\":6,\"size_x\":3,\"size_y\":2,\"type\":\"visualization\"},{\"col\":10,\"id\":\"Swift-During-Total-Runs-vs-Successful\",\"panelIndex\":13,\"row\":4,\"size_x\":3,\"size_y\":2,\"type\":\"visualization\"},{\"col\":7,\"id\":\"During-Upgrade-Test-Results\",\"panelIndex\":14,\"row\":1,\"size_x\":6,\"size_y\":1,\"type\":\"visualization\"}]",
+      "optionsJSON": "{\"darkTheme\":true}",
+      "uiStateJSON": "{\"P-5\":{\"vis\":{\"legendOpen\":true}},\"P-6\":{\"vis\":{\"legendOpen\":true}}}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "now",
+      "timeFrom": "now-1h",
       "kibanaSavedObjectMeta": {
         "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}}}]}"
       }
