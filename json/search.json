@@ -1,9 +1,9 @@
 [
   {
-    "_id": "Upgrade-Searches",
+    "_id": "Upgrade-Search",
     "_type": "search",
     "_source": {
-      "title": "Upgrade Searches",
+      "title": "Upgrade Search",
       "description": "",
       "hits": 0,
       "columns": [
