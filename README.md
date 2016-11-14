@@ -11,6 +11,6 @@ You can also specify parameters in the command.
 
     python import_objects.py -u http://localhost:9200/.kibana/ -s json/search.json -d json/dashboard.json -v json/visual.json
 
-You should then see that it imports all of the ojects specified.  This was written to be a part of a bigger script.  But can still be used and customized as needed.
+You should then see that it imports all of the objects specified.  This was written to be a part of a bigger script.  But can still be used and customized as needed.
 
 **More to add.  Still WIP**
