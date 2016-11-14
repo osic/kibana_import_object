@@ -9,7 +9,7 @@ Imports Kibana visualizations, searches, and dashboards to be used by others or 
  
 You can also specify parameters in the command.
 
-    python import_objects.py -s json/search.json -d json/dashboard.json -v json/visual.json
+    python import_objects.py -u http://localhost:9200/.kibana/ -s json/search.json -d json/dashboard.json -v json/visual.json
 
 You should then see that it imports all of the ojects specified.  This was written to be a part of a bigger script.  But can still be used and customized as needed.
 
