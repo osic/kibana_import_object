@@ -1,92 +1,37 @@
 [
   {
-    "_id": "Smoke-and-Persistence-Results",
+    "_id": "Overview-OSA-OnMetal-Upgrade-Results",
     "_type": "dashboard",
     "_source": {
-      "title": "Smoke and Persistence Results",
+      "title": "Overview OSA OnMetal Upgrade Results",
       "hits": 0,
       "description": "",
-      "panelsJSON": "[{\"col\":8,\"id\":\"Compute-Resource-Validation\",\"panelIndex\":8,\"row\":4,\"size_x\":4,\"size_y\":1,\"type\":\"visualization\"},{\"col\":7,\"id\":\"Compute-Resource-Cleanup\",\"panelIndex\":11,\"row\":1,\"size_x\":2,\"size_y\":3,\"type\":\"visualization\"},{\"col\":7,\"id\":\"Compute-Resource-Create\",\"panelIndex\":12,\"row\":5,\"size_x\":6,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Persistence-Compute-Results\",\"panelIndex\":18,\"row\":1,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"API-High-Level-Results\",\"panelIndex\":19,\"row\":4,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"During-High-Level-Results\",\"panelIndex\":20,\"row\":7,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":9,\"id\":\"Smoke-Test\",\"panelIndex\":21,\"row\":1,\"size_x\":4,\"size_y\":3,\"type\":\"visualization\"}]",
+      "panelsJSON": "[{\"col\":1,\"id\":\"Persistence-Compute-Results\",\"panelIndex\":18,\"row\":9,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":7,\"id\":\"API-High-Level-Results\",\"panelIndex\":19,\"row\":12,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"During-High-Level-Results\",\"panelIndex\":20,\"row\":12,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":10,\"id\":\"Time-Widget\",\"panelIndex\":24,\"row\":1,\"size_x\":3,\"size_y\":3,\"type\":\"visualization\"},{\"col\":10,\"id\":\"Number-of-Runs-being-Measured\",\"panelIndex\":26,\"row\":4,\"size_x\":3,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Please-select-a-run-for-accurate-results.-Runs-are-in-descending-order-(last-run-is-first).\",\"panelIndex\":35,\"row\":2,\"size_x\":9,\"size_y\":5,\"type\":\"visualization\"},{\"col\":1,\"id\":\"OSA-OnMetal-Upgrade\",\"panelIndex\":36,\"row\":1,\"size_x\":9,\"size_y\":1,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Please-see-below-for-downtime-specifics\",\"panelIndex\":37,\"row\":17,\"size_x\":12,\"size_y\":1,\"type\":\"visualization\"},{\"col\":1,\"id\":\"During-Tests-Results\",\"panelIndex\":42,\"row\":18,\"size_x\":12,\"size_y\":2,\"type\":\"visualization\"},{\"col\":7,\"id\":\"Persistence-Object-Storage-Results\",\"panelIndex\":43,\"row\":9,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Status-Embed\",\"panelIndex\":45,\"row\":20,\"size_x\":12,\"size_y\":7,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Smoke-Test\",\"panelIndex\":46,\"row\":7,\"size_x\":12,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"columns\":[\"smoke_before_success_pct\",\"smoke_before_success_total\",\"smoke_before_failures_total\",\"smoke_after_success_pct\",\"smoke_after_success_total\",\"smoke_after_failures_total\"],\"id\":\"OSA-OnMetal-Upgrade-Results\",\"panelIndex\":47,\"row\":15,\"size_x\":12,\"size_y\":2,\"sort\":[\"done_time\",\"desc\"],\"type\":\"search\"}]",
       "optionsJSON": "{\"darkTheme\":true}",
-      "uiStateJSON": "{\"P-18\":{\"spy\":{\"mode\":{\"fill\":false,\"name\":null}}},\"P-21\":{\"spy\":{\"mode\":{\"fill\":false,\"name\":null}}}}",
+      "uiStateJSON": "{\"P-19\":{\"spy\":{\"mode\":{\"fill\":false,\"name\":null}}},\"P-20\":{\"spy\":{\"mode\":{\"fill\":false,\"name\":null}}}}",
       "version": 1,
-      "timeRestore": false,
+      "timeRestore": true,
+      "timeTo": "now",
+      "timeFrom": "now-90d",
       "kibanaSavedObjectMeta": {
         "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}}}]}"
       }
     }
   },
   {
-    "_id": "Overview-Upgrade-Results",
+    "_id": "Status-Dash",
     "_type": "dashboard",
     "_source": {
-      "title": "Overview Upgrade Results",
+      "title": "Status Dash",
       "hits": 0,
       "description": "",
-      "panelsJSON": "[{\"col\":1,\"id\":\"Persistence-Compute-Results\",\"panelIndex\":18,\"row\":5,\"size_x\":12,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"API-High-Level-Results\",\"panelIndex\":19,\"row\":8,\"size_x\":12,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"During-High-Level-Results\",\"panelIndex\":20,\"row\":11,\"size_x\":12,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Smoke-Test\",\"panelIndex\":21,\"row\":2,\"size_x\":12,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Test-Results\",\"panelIndex\":23,\"row\":1,\"size_x\":12,\"size_y\":1,\"type\":\"visualization\"}]",
+      "panelsJSON": "[{\"col\":3,\"id\":\"Keystone-status-Log\",\"panelIndex\":1,\"row\":3,\"size_x\":9,\"size_y\":2,\"type\":\"visualization\"},{\"col\":3,\"id\":\"Nova-status-Log\",\"panelIndex\":2,\"row\":1,\"size_x\":9,\"size_y\":2,\"type\":\"visualization\"},{\"col\":3,\"id\":\"Swift-status-Log\",\"panelIndex\":3,\"row\":5,\"size_x\":9,\"size_y\":2,\"type\":\"visualization\"},{\"col\":12,\"id\":\"Time-Widget\",\"panelIndex\":4,\"row\":1,\"size_x\":1,\"size_y\":6,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Keystone-Success-Percentage\",\"panelIndex\":5,\"row\":3,\"size_x\":2,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Nova-Success-Percentage\",\"panelIndex\":6,\"row\":1,\"size_x\":2,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Swift-Success-Percentage\",\"panelIndex\":7,\"row\":5,\"size_x\":2,\"size_y\":2,\"type\":\"visualization\"}]",
       "optionsJSON": "{\"darkTheme\":true}",
-      "uiStateJSON": "{\"P-18\":{\"spy\":{\"mode\":{\"fill\":false,\"name\":null}}},\"P-21\":{\"spy\":{\"mode\":{\"fill\":false,\"name\":null}}}}",
+      "uiStateJSON": "{\"P-1\":{\"vis\":{\"legendOpen\":false}},\"P-2\":{\"vis\":{\"legendOpen\":false}},\"P-3\":{\"vis\":{\"legendOpen\":false}},\"P-5\":{\"vis\":{\"colors\":{\"status:1\":\"#890F02\"},\"legendOpen\":false}},\"P-6\":{\"spy\":{\"mode\":{\"fill\":false,\"name\":null}},\"vis\":{\"legendOpen\":false}},\"P-7\":{\"spy\":{\"mode\":{\"fill\":false,\"name\":null}},\"vis\":{\"colors\":{\"status:1\":\"#629E51\"},\"legendOpen\":false}}}",
       "version": 1,
       "timeRestore": true,
       "timeTo": "now",
-      "timeFrom": "now-3d",
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}}}]}"
-      }
-    }
-  },
-  {
-    "_id": "OverviewResults",
-    "_type": "dashboard",
-    "_source": {
-      "title": "OverviewResults",
-      "hits": 0,
-      "description": "",
-      "panelsJSON": "[{\"col\":7,\"id\":\"Persistence-Compute-Results\",\"panelIndex\":18,\"row\":5,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":7,\"id\":\"API-High-Level-Results\",\"panelIndex\":19,\"row\":8,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"During-High-Level-Results\",\"panelIndex\":20,\"row\":5,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Smoke-Test\",\"panelIndex\":21,\"row\":11,\"size_x\":12,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Test-Results\",\"panelIndex\":23,\"row\":3,\"size_x\":9,\"size_y\":2,\"type\":\"visualization\"},{\"col\":10,\"id\":\"Time-Widget\",\"panelIndex\":24,\"row\":3,\"size_x\":3,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Persistence-Object-Storage-Results\",\"panelIndex\":25,\"row\":8,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Number-of-Runs-being-Measured\",\"panelIndex\":26,\"row\":13,\"size_x\":12,\"size_y\":1,\"type\":\"visualization\"},{\"col\":1,\"columns\":[\"compute_resources_after-validate\"],\"id\":\"Upgrade-Search\",\"panelIndex\":27,\"row\":1,\"size_x\":12,\"size_y\":2,\"sort\":[\"done_time\",\"desc\"],\"type\":\"search\"}]",
-      "optionsJSON": "{\"darkTheme\":true}",
-      "uiStateJSON": "{\"P-21\":{\"spy\":{\"mode\":{\"fill\":false,\"name\":null}}},\"P-25\":{\"spy\":{\"mode\":{\"fill\":false,\"name\":null}}}}",
-      "version": 1,
-      "timeRestore": true,
-      "timeTo": "now",
-      "timeFrom": "now-7d",
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}}}]}"
-      }
-    }
-  },
-  {
-    "_id": "Overview-Results",
-    "_type": "dashboard",
-    "_source": {
-      "title": "Overview Results",
-      "hits": 0,
-      "description": "",
-      "panelsJSON": "[{\"col\":7,\"id\":\"Persistence-Compute-Results\",\"panelIndex\":18,\"row\":5,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":7,\"id\":\"API-High-Level-Results\",\"panelIndex\":19,\"row\":8,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"During-High-Level-Results\",\"panelIndex\":20,\"row\":5,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Smoke-Test\",\"panelIndex\":21,\"row\":11,\"size_x\":12,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Test-Results\",\"panelIndex\":23,\"row\":3,\"size_x\":9,\"size_y\":2,\"type\":\"visualization\"},{\"col\":10,\"id\":\"Time-Widget\",\"panelIndex\":24,\"row\":3,\"size_x\":3,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Persistence-Object-Storage-Results\",\"panelIndex\":25,\"row\":8,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Number-of-Runs-being-Measured\",\"panelIndex\":26,\"row\":13,\"size_x\":12,\"size_y\":1,\"type\":\"visualization\"},{\"col\":1,\"columns\":[\"compute_resources_after-validate\"],\"id\":\"Upgrade-Search\",\"panelIndex\":27,\"row\":1,\"size_x\":12,\"size_y\":2,\"sort\":[\"done_time\",\"desc\"],\"type\":\"search\"}]",
-      "optionsJSON": "{\"darkTheme\":true}",
-      "uiStateJSON": "{\"P-21\":{\"spy\":{\"mode\":{\"fill\":false,\"name\":null}}},\"P-25\":{\"spy\":{\"mode\":{\"fill\":false,\"name\":null}}}}",
-      "version": 1,
-      "timeRestore": true,
-      "timeTo": "now",
-      "timeFrom": "now-7d",
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}}}]}"
-      }
-    }
-  },
-  {
-    "_id": "Upgrade-Dash-Dev",
-    "_type": "dashboard",
-    "_source": {
-      "title": "Upgrade Dash Dev",
-      "hits": 0,
-      "description": "",
-      "panelsJSON": "[{\"col\":1,\"id\":\"Nova-Uptime\",\"panelIndex\":2,\"row\":5,\"size_x\":3,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Swift-Uptime\",\"panelIndex\":3,\"row\":2,\"size_x\":3,\"size_y\":3,\"type\":\"visualization\"},{\"col\":4,\"id\":\"Nova-API-Total-Runs-vs-Successful\",\"panelIndex\":5,\"row\":5,\"size_x\":3,\"size_y\":3,\"type\":\"visualization\"},{\"col\":4,\"id\":\"Swift-API-Total-Runs-vs-Successful\",\"panelIndex\":6,\"row\":2,\"size_x\":3,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"API-Uptime-Test-Results\",\"panelIndex\":7,\"row\":1,\"size_x\":6,\"size_y\":1,\"type\":\"visualization\"},{\"col\":7,\"id\":\"Keystone-During\",\"panelIndex\":8,\"row\":2,\"size_x\":3,\"size_y\":2,\"type\":\"visualization\"},{\"col\":7,\"id\":\"Nova-During\",\"panelIndex\":9,\"row\":6,\"size_x\":3,\"size_y\":2,\"type\":\"visualization\"},{\"col\":7,\"id\":\"Swift-During\",\"panelIndex\":10,\"row\":4,\"size_x\":3,\"size_y\":2,\"type\":\"visualization\"},{\"col\":10,\"id\":\"Keystone-During-Total-Runs-vs-Successful\",\"panelIndex\":11,\"row\":2,\"size_x\":3,\"size_y\":2,\"type\":\"visualization\"},{\"col\":10,\"id\":\"Nova-During-Total-Runs-vs-Successful\",\"panelIndex\":12,\"row\":6,\"size_x\":3,\"size_y\":2,\"type\":\"visualization\"},{\"col\":10,\"id\":\"Swift-During-Total-Runs-vs-Successful\",\"panelIndex\":13,\"row\":4,\"size_x\":3,\"size_y\":2,\"type\":\"visualization\"},{\"col\":7,\"id\":\"During-Upgrade-Test-Results\",\"panelIndex\":14,\"row\":1,\"size_x\":6,\"size_y\":1,\"type\":\"visualization\"}]",
-      "optionsJSON": "{\"darkTheme\":true}",
-      "uiStateJSON": "{\"P-5\":{\"vis\":{\"legendOpen\":true}},\"P-6\":{\"vis\":{\"legendOpen\":true}}}",
-      "version": 1,
-      "timeRestore": true,
-      "timeTo": "now",
-      "timeFrom": "now-1h",
+      "timeFrom": "now-1y/y",
       "kibanaSavedObjectMeta": {
         "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}}}]}"
       }

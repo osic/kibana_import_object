@@ -1,0 +1,39 @@
+{
+ "mappings" : {
+  "_default_" : {
+   "properties" : {
+    "object_storage_after-validate": { "type" : "integer", "index" : "not_analyzed"  },
+    "object_storage_create": { "type" : "integer", "index" : "not_analyzed"  },
+    "smoke_after_success_total": { "type" : "integer", "index" : "not_analyzed"  },
+    "compute_resources_create": { "type" : "integer", "index" : "not_analyzed"  },
+    "nova_api_total": { "type" : "integer", "index" : "not_analyzed"  },
+    "compute_resources_after-validate": { "type" : "integer", "index" : "not_analyzed"  },
+    "swift_during_uptime": { "type" : "integer", "index" : "not_analyzed"  },
+    "compute_resources_cleanup": { "type" : "integer", "index" : "not_analyzed"  },
+    "nova_during_total": { "type" : "integer", "index" : "not_analyzed"  },
+    "nova_during_success": { "type" : "integer", "index" : "not_analyzed"  },
+    "smoke_after_failures_total": { "type" : "integer", "index" : "not_analyzed"  },
+    "done_time": { "type" : "date"},
+    "compute_resources_before-validate": { "type" : "integer", "index" : "not_analyzed"  },
+    "smoke_different_tests": { "type" : "integer", "index" : "not_analyzed"  },
+    "swift_during_success": { "type" : "integer", "index" : "not_analyzed"  },
+    "smoke_before_success_total": { "type" : "integer", "index" : "not_analyzed"  },
+    "keystone_during_success": { "type" : "integer", "index" : "not_analyzed"  },
+    "smoke_after_success_pct": { "type" : "integer", "index" : "not_analyzed"  },
+    "swift_api_uptime": { "type" : "integer", "index" : "not_analyzed"  },
+    "smoke_before_success_pct": { "type" : "integer", "index" : "not_analyzed"  },
+    "swift_api_success": { "type" : "integer", "index" : "not_analyzed"  },
+    "nova_during_uptime": { "type" : "integer", "index" : "not_analyzed"  },
+    "swift_api_total": { "type" : "integer", "index" : "not_analyzed"  },
+    "swift_during_total": { "type" : "integer", "index" : "not_analyzed"  },
+    "object_storage_cleanup": { "type" : "integer", "index" : "not_analyzed"  },
+    "object_storage_before-validate": { "type" : "integer", "index" : "not_analyzed"  },
+    "nova_api_uptime": { "type" : "integer", "index" : "not_analyzed"  },
+    "keystone_during_total": { "type" : "integer", "index" : "not_analyzed"  },
+    "keystone_during_uptime": { "type" : "integer", "index" : "not_analyzed"  },
+    "smoke_before_failures_total": { "type" : "integer", "index" : "not_analyzed"  },
+    "nova_api_success": { "type" : "integer", "index" : "not_analyzed"  }
+   }
+  }
+ }
+}

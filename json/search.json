@@ -1,9 +1,9 @@
 [
   {
-    "_id": "Upgrade-Search",
+    "_id": "OSA-OnMetal-Upgrade-Results",
     "_type": "search",
     "_source": {
-      "title": "Upgrade Search",
+      "title": "OSA OnMetal Upgrade Results",
       "description": "",
       "hits": 0,
       "columns": [
@@ -15,7 +15,7 @@
       ],
       "version": 1,
       "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"osa_onmetal_upgrade_test\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}},\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647}}"
+        "searchSourceJSON": "{\"index\":\"osa_onmetal_upgrade_test\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647}}"
       }
     }
   }

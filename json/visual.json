@@ -1,463 +1,43 @@
 [
   {
-    "_id": "Keystone-Uptime",
+    "_id": "Keystone-Success-Percentage",
     "_type": "visualization",
     "_source": {
-      "title": "Keystone Uptime",
-      "visState": "{\"title\":\"New Visualization\",\"type\":\"metric\",\"params\":{\"handleNoResults\":true,\"fontSize\":60},\"aggs\":[{\"id\":\"1\",\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"keystone_api_uptime\",\"customLabel\":\"Keystone Uptime\"}}],\"listeners\":{}}",
+      "title": "Keystone Success %",
+      "visState": "{\"title\":\"Nova Success %\",\"type\":\"pie\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"isDonut\":false},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"filters\",\"schema\":\"segment\",\"params\":{\"filters\":[{\"input\":{\"query\":{\"query_string\":{\"query\":\"status:1\",\"analyze_wildcard\":true}}},\"label\":\"\"},{\"input\":{\"query\":{\"query_string\":{\"query\":\"status:0\",\"analyze_wildcard\":true}}}}]}}],\"listeners\":{}}",
       "uiStateJSON": "{}",
       "description": "",
       "version": 1,
       "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"osa_onmetal_upgrade_test\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+        "searchSourceJSON": "{\"index\":\"osa_onmetal_upgrade_status_log\",\"query\":{\"query_string\":{\"query\":\"service: keystone\",\"analyze_wildcard\":true}},\"filter\":[]}"
       }
     }
   },
   {
-    "_id": "Nova-Uptime",
+    "_id": "Nova-Success-Percentage",
     "_type": "visualization",
     "_source": {
-      "title": "Nova Uptime",
-      "visState": "{\"title\":\"New Visualization\",\"type\":\"metric\",\"params\":{\"handleNoResults\":true,\"fontSize\":60},\"aggs\":[{\"id\":\"1\",\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"nova_api_uptime\",\"customLabel\":\"Nova Uptime\"}}],\"listeners\":{}}",
+      "title": "Nova Success %",
+      "visState": "{\"title\":\"New Visualization\",\"type\":\"pie\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"isDonut\":false},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"filters\",\"schema\":\"segment\",\"params\":{\"filters\":[{\"input\":{\"query\":{\"query_string\":{\"query\":\"status:1\",\"analyze_wildcard\":true}}},\"label\":\"\"},{\"input\":{\"query\":{\"query_string\":{\"query\":\"status:0\",\"analyze_wildcard\":true}}}}]}}],\"listeners\":{}}",
       "uiStateJSON": "{}",
       "description": "",
       "version": 1,
       "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"osa_onmetal_upgrade_test\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+        "searchSourceJSON": "{\"index\":\"osa_onmetal_upgrade_status_log\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"service: nova\"}},\"filter\":[]}"
       }
     }
   },
   {
-    "_id": "Keystone-API-Total-Runs-vs-Successful",
+    "_id": "Swift-Success-Percentage",
     "_type": "visualization",
     "_source": {
-      "title": "Keystone API Total Runs vs Successful",
-      "visState": "{\"title\":\"New Visualization\",\"type\":\"histogram\",\"params\":{\"shareYAxis\":true,\"addTooltip\":false,\"addLegend\":true,\"scale\":\"linear\",\"mode\":\"grouped\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{\"max\":10,\"min\":0}},\"aggs\":[{\"id\":\"1\",\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"keystone_api_success\",\"customLabel\":\"API Test Total\"}},{\"id\":\"2\",\"type\":\"min\",\"schema\":\"metric\",\"params\":{\"field\":\"keystone_api_total\",\"customLabel\":\"API Test Success\"}}],\"listeners\":{}}",
+      "title": "Swift Success %",
+      "visState": "{\"title\":\"Keystone Success %\",\"type\":\"pie\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"isDonut\":false},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"filters\",\"schema\":\"segment\",\"params\":{\"filters\":[{\"input\":{\"query\":{\"query_string\":{\"query\":\"status:1\",\"analyze_wildcard\":true}}},\"label\":\"\"},{\"input\":{\"query\":{\"query_string\":{\"query\":\"status:0\",\"analyze_wildcard\":true}}}}]}}],\"listeners\":{}}",
       "uiStateJSON": "{}",
       "description": "",
       "version": 1,
       "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"osa_onmetal_upgrade_test\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
-      }
-    }
-  },
-  {
-    "_id": "Swift-API-Total-Runs-vs-Successful",
-    "_type": "visualization",
-    "_source": {
-      "title": "Swift API Total Runs vs Successful",
-      "visState": "{\"title\":\"Nova API Total Runs vs Successful\",\"type\":\"histogram\",\"params\":{\"shareYAxis\":true,\"addTooltip\":false,\"addLegend\":true,\"scale\":\"linear\",\"mode\":\"grouped\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{\"max\":10,\"min\":0}},\"aggs\":[{\"id\":\"1\",\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"swift_api_success\",\"customLabel\":\"Swift API Test Success\"}},{\"id\":\"2\",\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"swift_api_total\",\"customLabel\":\"Swift API Test Total\"}}],\"listeners\":{}}",
-      "uiStateJSON": "{}",
-      "description": "",
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"osa_onmetal_upgrade_test\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
-      }
-    }
-  },
-  {
-    "_id": "Nova-API-Total-Runs-vs-Successful",
-    "_type": "visualization",
-    "_source": {
-      "title": "Nova API Total Runs vs Successful",
-      "visState": "{\"title\":\"Nova API Total Runs vs Successful\",\"type\":\"histogram\",\"params\":{\"shareYAxis\":true,\"addTooltip\":false,\"addLegend\":true,\"scale\":\"linear\",\"mode\":\"grouped\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{\"max\":10,\"min\":0}},\"aggs\":[{\"id\":\"1\",\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"nova_api_success\",\"customLabel\":\"Nova API Test Success\"}},{\"id\":\"2\",\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"nova_api_total\",\"customLabel\":\"Nova API Test Total\"}}],\"listeners\":{}}",
-      "uiStateJSON": "{}",
-      "description": "",
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"osa_onmetal_upgrade_test\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
-      }
-    }
-  },
-  {
-    "_id": "API-Uptime-Test-Results",
-    "_type": "visualization",
-    "_source": {
-      "title": "API Uptime Test Results",
-      "visState": "{\"title\":\"New Visualization\",\"type\":\"markdown\",\"params\":{\"markdown\":\"Please see below the results of the API uptime tests.  This test pings the below services while the upgrade is happening to ensure API uptime during upgrade.\"},\"aggs\":[],\"listeners\":{}}",
-      "uiStateJSON": "{}",
-      "description": "",
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
-      }
-    }
-  },
-  {
-    "_id": "Swift-Uptime",
-    "_type": "visualization",
-    "_source": {
-      "title": "Swift Uptime",
-      "visState": "{\"title\":\"New Visualization\",\"type\":\"metric\",\"params\":{\"handleNoResults\":true,\"fontSize\":60},\"aggs\":[{\"id\":\"1\",\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"swift_api_uptime\",\"customLabel\":\"Swift Uptime\"}}],\"listeners\":{}}",
-      "uiStateJSON": "{}",
-      "description": "",
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"osa_onmetal_upgrade_test\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
-      }
-    }
-  },
-  {
-    "_id": "Keystone-During",
-    "_type": "visualization",
-    "_source": {
-      "title": "Keystone During",
-      "visState": "{\"title\":\"Keystone Uptime\",\"type\":\"metric\",\"params\":{\"handleNoResults\":true,\"fontSize\":60},\"aggs\":[{\"id\":\"1\",\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"keystone_during_uptime\",\"customLabel\":\"Keystone During\"}}],\"listeners\":{}}",
-      "uiStateJSON": "{}",
-      "description": "",
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"osa_onmetal_upgrade_test\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
-      }
-    }
-  },
-  {
-    "_id": "Nova-During",
-    "_type": "visualization",
-    "_source": {
-      "title": "Nova During",
-      "visState": "{\"title\":\"Keystone During\",\"type\":\"metric\",\"params\":{\"handleNoResults\":true,\"fontSize\":60},\"aggs\":[{\"id\":\"1\",\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"nova_during_uptime\",\"customLabel\":\"Nova During\"}}],\"listeners\":{}}",
-      "uiStateJSON": "{}",
-      "description": "",
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"osa_onmetal_upgrade_test\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
-      }
-    }
-  },
-  {
-    "_id": "Swift-During",
-    "_type": "visualization",
-    "_source": {
-      "title": "Swift During",
-      "visState": "{\"title\":\"Nova During\",\"type\":\"metric\",\"params\":{\"handleNoResults\":true,\"fontSize\":60},\"aggs\":[{\"id\":\"1\",\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"swift_during_uptime\",\"customLabel\":\"Swift During\"}}],\"listeners\":{}}",
-      "uiStateJSON": "{}",
-      "description": "",
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"osa_onmetal_upgrade_test\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
-      }
-    }
-  },
-  {
-    "_id": "Keystone-During-Total-Runs-vs-Successful",
-    "_type": "visualization",
-    "_source": {
-      "title": "Keystone During Total Runs vs Successful",
-      "visState": "{\"title\":\"Keystone API Total Runs vs Successful\",\"type\":\"histogram\",\"params\":{\"shareYAxis\":true,\"addTooltip\":false,\"addLegend\":true,\"scale\":\"linear\",\"mode\":\"grouped\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{\"max\":10,\"min\":0}},\"aggs\":[{\"id\":\"1\",\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"keystone_during_total\",\"customLabel\":\"During Test Total\"}},{\"id\":\"2\",\"type\":\"min\",\"schema\":\"metric\",\"params\":{\"field\":\"keystone_during_success\",\"customLabel\":\"During Test Success\"}}],\"listeners\":{}}",
-      "uiStateJSON": "{}",
-      "description": "",
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"osa_onmetal_upgrade_test\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
-      }
-    }
-  },
-  {
-    "_id": "Nova-During-Total-Runs-vs-Successful",
-    "_type": "visualization",
-    "_source": {
-      "title": "Nova During Total Runs vs Successful",
-      "visState": "{\"title\":\"Keystone During Total Runs vs Successful\",\"type\":\"histogram\",\"params\":{\"shareYAxis\":true,\"addTooltip\":false,\"addLegend\":true,\"scale\":\"linear\",\"mode\":\"grouped\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{\"max\":10,\"min\":0}},\"aggs\":[{\"id\":\"1\",\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"nova_during_total\",\"customLabel\":\"During Test Total\"}},{\"id\":\"2\",\"type\":\"min\",\"schema\":\"metric\",\"params\":{\"field\":\"nova_during_success\",\"customLabel\":\"During Test Success\"}}],\"listeners\":{}}",
-      "uiStateJSON": "{}",
-      "description": "",
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"osa_onmetal_upgrade_test\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
-      }
-    }
-  },
-  {
-    "_id": "Swift-During-Total-Runs-vs-Successful",
-    "_type": "visualization",
-    "_source": {
-      "title": "Swift During Total Runs vs Successful",
-      "visState": "{\"title\":\"Nova During Total Runs vs Successful\",\"type\":\"histogram\",\"params\":{\"shareYAxis\":true,\"addTooltip\":false,\"addLegend\":true,\"scale\":\"linear\",\"mode\":\"grouped\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{\"max\":10,\"min\":0}},\"aggs\":[{\"id\":\"1\",\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"swift_during_total\",\"customLabel\":\"During Test Total\"}},{\"id\":\"2\",\"type\":\"min\",\"schema\":\"metric\",\"params\":{\"field\":\"swift_during_success\",\"customLabel\":\"During Test Success\"}}],\"listeners\":{}}",
-      "uiStateJSON": "{}",
-      "description": "",
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"osa_onmetal_upgrade_test\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
-      }
-    }
-  },
-  {
-    "_id": "Persistence-Verification-Results",
-    "_type": "visualization",
-    "_source": {
-      "title": "Persistence Verification Results",
-      "visState": "{\"title\":\"New Visualization\",\"type\":\"histogram\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"scale\":\"linear\",\"mode\":\"grouped\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"compute_resources_after-verify\",\"customLabel\":\"After Verified\"}},{\"id\":\"2\",\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"compute_resources_before-verify\",\"customLabel\":\"Before Verified\"}}],\"listeners\":{}}",
-      "uiStateJSON": "{}",
-      "description": "",
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"osa_onmetal_upgrade_test\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
-      }
-    }
-  },
-  {
-    "_id": "Persistence-Cleanup",
-    "_type": "visualization",
-    "_source": {
-      "title": "Persistence Cleanup",
-      "visState": "{\"title\":\"New Visualization\",\"type\":\"heatmap\",\"params\":{\"margin\":{\"top\":20,\"right\":200,\"bottom\":100,\"left\":100},\"stroke\":\"#ffffff\",\"strokeWidth\":1,\"padding\":0,\"legendNumberFormat\":\"number\",\"color\":\"YlGn\",\"numberOfColors\":6,\"rowAxis\":{\"filterBy\":0,\"title\":\"\"},\"columnAxis\":{\"filterBy\":0,\"title\":\"\"},\"legendTitle\":\"Max compute_resources_cleanup\"},\"aggs\":[{\"id\":\"1\",\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"compute_resources_cleanup\"}}],\"listeners\":{}}",
-      "uiStateJSON": "{}",
-      "description": "",
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"osa_onmetal_upgrade_test\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
-      }
-    }
-  },
-  {
-    "_id": "During-Upgrade-Test-Results",
-    "_type": "visualization",
-    "_source": {
-      "title": "During Upgrade Test Results",
-      "visState": "{\"title\":\"API Uptime Test Results\",\"type\":\"markdown\",\"params\":{\"markdown\":\"Please see below the results of the During Upgrade tests.  This test carries out a simple use case for each project listed below during the upgrade to ensure functionality of critical project services.\"},\"aggs\":[],\"listeners\":{}}",
-      "uiStateJSON": "{}",
-      "description": "",
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
-      }
-    }
-  },
-  {
-    "_id": "Smoke-Pre-Upgrade-Success-Percent",
-    "_type": "visualization",
-    "_source": {
-      "title": "Smoke Pre-Upgrade Success Percent",
-      "visState": "{\"title\":\"New Visualization\",\"type\":\"metric\",\"params\":{\"handleNoResults\":true,\"fontSize\":60},\"aggs\":[{\"id\":\"1\",\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"smoke_before_success_pct\",\"customLabel\":\"Smoke Before Success\"}}],\"listeners\":{}}",
-      "uiStateJSON": "{}",
-      "description": "",
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"osa_onmetal_upgrade_test\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
-      }
-    }
-  },
-  {
-    "_id": "Smoke-Post-Upgrade-Success-Percent",
-    "_type": "visualization",
-    "_source": {
-      "title": "Smoke Post-Upgrade Success Percent",
-      "visState": "{\"title\":\"Smoke Pre-Upgrade Success Percent\",\"type\":\"metric\",\"params\":{\"handleNoResults\":true,\"fontSize\":60},\"aggs\":[{\"id\":\"1\",\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"smoke_after_success_pct\",\"customLabel\":\"Smoke After Success\"}}],\"listeners\":{}}",
-      "uiStateJSON": "{}",
-      "description": "",
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"osa_onmetal_upgrade_test\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
-      }
-    }
-  },
-  {
-    "_id": "Compute-Resource-Validation",
-    "_type": "visualization",
-    "_source": {
-      "title": "Compute Resource Validation",
-      "visState": "{\"title\":\"Compute Resource Validation\",\"type\":\"markdown\",\"params\":{\"markdown\":\"Shows result of validation for Persistence tests.  A total of 0 denotes failure to cleanup the resources.\"},\"aggs\":[],\"listeners\":{}}",
-      "uiStateJSON": "{}",
-      "description": "",
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
-      }
-    }
-  },
-  {
-    "_id": "Compute-Resource-Create",
-    "_type": "visualization",
-    "_source": {
-      "title": "Compute Resource Create",
-      "visState": "{\"title\":\"Compute Resource Cleanup\",\"type\":\"markdown\",\"params\":{\"markdown\":\"Shows result of resource creation for Persistence tests.  A total of 0 means the resources failed to create.\"},\"aggs\":[],\"listeners\":{}}",
-      "uiStateJSON": "{}",
-      "description": "",
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
-      }
-    }
-  },
-  {
-    "_id": "Compute-Resource-Creation",
-    "_type": "visualization",
-    "_source": {
-      "title": "Compute Resource Creation",
-      "visState": "{\"title\":\"New Visualization\",\"type\":\"markdown\",\"params\":{\"markdown\":\"Shows result of resource creation for Persistence tests\"},\"aggs\":[],\"listeners\":{}}",
-      "uiStateJSON": "{}",
-      "description": "",
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
-      }
-    }
-  },
-  {
-    "_id": "Persistence-Compute-Verify-Before",
-    "_type": "visualization",
-    "_source": {
-      "title": "Persistence Compute Verify - Before",
-      "visState": "{\"title\":\"Persistence Compute Verify - Before\",\"type\":\"heatmap\",\"params\":{\"margin\":{\"top\":20,\"right\":200,\"bottom\":100,\"left\":100},\"stroke\":\"#ffffff\",\"strokeWidth\":1,\"padding\":0,\"legendNumberFormat\":\"number\",\"color\":\"RdYlGn\",\"numberOfColors\":6,\"rowAxis\":{\"filterBy\":0,\"title\":\"\"},\"columnAxis\":{\"filterBy\":0,\"title\":\"\"},\"legendTitle\":\"Verify Before\"},\"aggs\":[{\"id\":\"1\",\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"compute_resources_before-verify\",\"customLabel\":\"Verify Before\"}}],\"listeners\":{}}",
-      "uiStateJSON": "{}",
-      "description": "",
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"osa_onmetal_upgrade_test\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
-      }
-    }
-  },
-  {
-    "_id": "Persistence-Compute-Verify-After",
-    "_type": "visualization",
-    "_source": {
-      "title": "Persistence Compute Verify - After",
-      "visState": "{\"title\":\"Persistence Compute Verify - After\",\"type\":\"heatmap\",\"params\":{\"margin\":{\"top\":20,\"right\":200,\"bottom\":100,\"left\":100},\"stroke\":\"#ffffff\",\"strokeWidth\":1,\"padding\":0,\"legendNumberFormat\":\"number\",\"color\":\"RdYlGn\",\"numberOfColors\":6,\"rowAxis\":{\"filterBy\":0,\"title\":\"\"},\"columnAxis\":{\"filterBy\":0,\"title\":\"\"},\"legendTitle\":\"Verify After\"},\"aggs\":[{\"id\":\"1\",\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"compute_resources_after-verify\",\"customLabel\":\"Verify After\"}}],\"listeners\":{}}",
-      "uiStateJSON": "{}",
-      "description": "",
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"osa_onmetal_upgrade_test\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
-      }
-    }
-  },
-  {
-    "_id": "Persistence-Compute-CleanUp",
-    "_type": "visualization",
-    "_source": {
-      "title": "Persistence Compute CleanUp",
-      "visState": "{\"title\":\"Persistence Compute CleanUp\",\"type\":\"heatmap\",\"params\":{\"margin\":{\"top\":20,\"right\":200,\"bottom\":100,\"left\":100},\"stroke\":\"#ffffff\",\"strokeWidth\":1,\"padding\":0,\"legendNumberFormat\":\"number\",\"color\":\"RdYlGn\",\"numberOfColors\":6,\"rowAxis\":{\"filterBy\":0,\"title\":\"\"},\"columnAxis\":{\"filterBy\":0,\"title\":\"\"},\"legendTitle\":\"jnh\"},\"aggs\":[{\"id\":\"1\",\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"compute_resources_cleanup\",\"customLabel\":\"jnh\"}}],\"listeners\":{}}",
-      "uiStateJSON": "{}",
-      "description": "",
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"osa_onmetal_upgrade_test\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
-      }
-    }
-  },
-  {
-    "_id": "Persistence-Compute-Create",
-    "_type": "visualization",
-    "_source": {
-      "title": "Persistence Compute Create",
-      "visState": "{\"title\":\"Persistence Compute Create\",\"type\":\"heatmap\",\"params\":{\"margin\":{\"top\":20,\"right\":200,\"bottom\":100,\"left\":100},\"stroke\":\"#ffffff\",\"strokeWidth\":1,\"padding\":0,\"legendNumberFormat\":\"number\",\"color\":\"RdYlGn\",\"numberOfColors\":6,\"rowAxis\":{\"filterBy\":0,\"title\":\"\"},\"columnAxis\":{\"filterBy\":0,\"title\":\"\"},\"legendTitle\":\"Compute Create\"},\"aggs\":[{\"id\":\"1\",\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"compute_resources_create\",\"customLabel\":\"Compute Create\"}}],\"listeners\":{}}",
-      "uiStateJSON": "{}",
-      "description": "",
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"osa_onmetal_upgrade_test\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
-      }
-    }
-  },
-  {
-    "_id": "Smoke-Failed-Test-Total",
-    "_type": "visualization",
-    "_source": {
-      "title": "Smoke Failed Test Total",
-      "visState": "{\"title\":\"Smoke Failed Test Total\",\"type\":\"histogram\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"scale\":\"linear\",\"mode\":\"grouped\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"smoke_before_failures_total\",\"customLabel\":\"Before\"}},{\"id\":\"2\",\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"smoke_after_failures_total\",\"customLabel\":\"After\"}}],\"listeners\":{}}",
-      "uiStateJSON": "{}",
-      "description": "",
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"osa_onmetal_upgrade_test\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
-      }
-    }
-  },
-  {
-    "_id": "Smoke-Success-Test-Total",
-    "_type": "visualization",
-    "_source": {
-      "title": "Smoke Success Test Total",
-      "visState": "{\"title\":\"Smoke Success Test Total\",\"type\":\"histogram\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"scale\":\"linear\",\"mode\":\"grouped\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"smoke_before_success_total\",\"customLabel\":\"Before\"}},{\"id\":\"2\",\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"smoke_after_success_total\",\"customLabel\":\"After\"}}],\"listeners\":{}}",
-      "uiStateJSON": "{}",
-      "description": "",
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"osa_onmetal_upgrade_test\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
-      }
-    }
-  },
-  {
-    "_id": "Compute-Resource-Cleanup",
-    "_type": "visualization",
-    "_source": {
-      "title": "Compute Resource Cleanup",
-      "visState": "{\"title\":\"Compute Resource Cleanup\",\"type\":\"markdown\",\"params\":{\"markdown\":\"Shows result of resource cleanup for Persistence tests.  A total of 0 means the resources failed to be deleted.\"},\"aggs\":[],\"listeners\":{}}",
-      "uiStateJSON": "{}",
-      "description": "",
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
-      }
-    }
-  },
-  {
-    "_id": "Smoke-Failure-Results",
-    "_type": "visualization",
-    "_source": {
-      "title": "Smoke Failure Results",
-      "visState": "{\"title\":\"During High Level Results\",\"type\":\"heatmap\",\"params\":{\"color\":\"Reds\",\"columnAxis\":{\"filterBy\":0,\"title\":\"filters\"},\"legendNumberFormat\":\"number\",\"legendTitle\":\"0\",\"margin\":{\"bottom\":100,\"left\":100,\"right\":200,\"top\":20},\"numberOfColors\":\"6\",\"padding\":\"0.2\",\"rowAxis\":{\"filterBy\":0,\"title\":\"\"},\"stroke\":\"#ffffff\",\"strokeWidth\":1},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"0\"}},{\"id\":\"3\",\"type\":\"filters\",\"schema\":\"columns\",\"params\":{\"filters\":[{\"input\":{\"query\":{\"query_string\":{\"query\":\"smoke_after_failures_total > 1\",\"analyze_wildcard\":true}}},\"label\":\"\"}]}}],\"listeners\":{}}",
-      "uiStateJSON": "{}",
-      "description": "",
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"osa_onmetal_upgrade_test\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}},\"filter\":[]}"
-      }
-    }
-  },
-  {
-    "_id": "Smoke-Test-Pass",
-    "_type": "visualization",
-    "_source": {
-      "title": "Smoke Test Pass",
-      "visState": "{\"title\":\"Smoke Test Pass\",\"type\":\"heatmap\",\"params\":{\"color\":\"Reds\",\"columnAxis\":{\"filterBy\":0,\"title\":\"filters\"},\"legendNumberFormat\":\"number\",\"legendTitle\":\"0\",\"margin\":{\"bottom\":100,\"left\":100,\"right\":200,\"top\":20},\"numberOfColors\":\"6\",\"padding\":\"0.2\",\"rowAxis\":{\"filterBy\":0,\"title\":\"\"},\"stroke\":\"#ffffff\",\"strokeWidth\":1},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"0\"}},{\"id\":\"3\",\"type\":\"filters\",\"schema\":\"columns\",\"params\":{\"filters\":[{\"input\":{\"query\":{\"query_string\":{\"query\":\"smoke_after_failures_total > 1\",\"analyze_wildcard\":true}}},\"label\":\"Smoke Pass Fail\"}]}}],\"listeners\":{}}",
-      "uiStateJSON": "{}",
-      "description": "",
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"osa_onmetal_upgrade_test\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}},\"filter\":[]}"
-      }
-    }
-  },
-  {
-    "_id": "Smoke-Test-Failures",
-    "_type": "visualization",
-    "_source": {
-      "title": "Smoke Test Failures",
-      "visState": "{\"title\":\"New Visualization\",\"type\":\"metric\",\"params\":{\"handleNoResults\":true,\"fontSize\":60},\"aggs\":[{\"id\":\"1\",\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"smoke_before_failures_total\",\"customLabel\":\"Before\"}},{\"id\":\"2\",\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"smoke_after_failures_total\",\"customLabel\":\"After\"}}],\"listeners\":{}}",
-      "uiStateJSON": "{}",
-      "description": "",
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"osa_onmetal_upgrade_test\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
-      }
-    }
-  },
-  {
-    "_id": "Key-Uptime",
-    "_type": "visualization",
-    "_source": {
-      "title": "Key Uptime",
-      "visState": "{\"title\":\"New Visualization\",\"type\":\"kbn_percent_nice\",\"params\":{\"showPictures\":true,\"fontSizeLabel\":14,\"fontSizeValue\":\"34\",\"jsonLabels\":\"[{ \\\"text\\\" : \\\"Keystone Uptime\\\",\\\"numeralFormat\\\" : \\\"%00,0\\\",\\\"ranges\\\" :[{ \\\"min\\\" : 0,\\\"max\\\": 5000,\\\"valueColor\\\" : \\\"blue\\\"},{ \\\"min\\\" : 5000,\\\"max\\\": 10000,\\\"valueColor\\\" : \\\"red\\\"}],\\\"image\\\" : \\\"fuelContainer\\\"}]\"},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"Keystone Uptime\"}},{\"id\":\"2\",\"type\":\"filters\",\"schema\":\"segment\",\"params\":{\"filters\":[{\"input\":{\"query\":{\"query_string\":{\"query\":\"keystone_api_uptime: 100\",\"analyze_wildcard\":true}}},\"label\":\"\"}]}}],\"listeners\":{}}",
-      "uiStateJSON": "{}",
-      "description": "",
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"osa_onmetal_upgrade_test\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
-      }
-    }
-  },
-  {
-    "_id": "Smoke-Test-Results",
-    "_type": "visualization",
-    "_source": {
-      "title": "Smoke Test Results",
-      "visState": "{\"title\":\"Smoke Test Results\",\"type\":\"markdown\",\"params\":{\"markdown\":\"If the Smoke Test status is red. \\\"Houston we have a problem.\\\"  There were failures running the smoke test.\"},\"aggs\":[],\"listeners\":{}}",
-      "uiStateJSON": "{}",
-      "description": "",
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+        "searchSourceJSON": "{\"index\":\"osa_onmetal_upgrade_status_log\",\"query\":{\"query_string\":{\"query\":\"service: swift\",\"analyze_wildcard\":true}},\"filter\":[]}"
       }
     }
   },
@@ -465,10 +45,10 @@
     "_id": "Time-Widget",
     "_type": "visualization",
     "_source": {
-      "title": "Time Widget",
       "visState": "{\"title\":\"New Visualization\",\"type\":\"time\",\"params\":{\"enable_quick\":true,\"enable_relative\":true,\"enable_absolut\":true,\"enable_animation\":true},\"aggs\":[],\"listeners\":{}}",
-      "uiStateJSON": "{}",
       "description": "",
+      "title": "Time Widget",
+      "uiStateJSON": "{}",
       "version": 1,
       "kibanaSavedObjectMeta": {
         "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
@@ -476,39 +56,95 @@
     }
   },
   {
-    "_id": "During-High-Level-Results",
+    "_id": "Swift-status-Log",
     "_type": "visualization",
     "_source": {
-      "title": "During High Level Results",
-      "visState": "{\"title\":\"During High Level Results\",\"type\":\"heatmap\",\"params\":{\"color\":\"RdYlGn\",\"columnAxis\":{\"filterBy\":0,\"title\":\"filters\"},\"legendNumberFormat\":\"number\",\"legendTitle\":\"Count\",\"margin\":{\"bottom\":100,\"left\":100,\"right\":200,\"top\":20},\"numberOfColors\":\"4\",\"padding\":\"0.2\",\"rowAxis\":{\"filterBy\":0,\"title\":\"\"},\"stroke\":\"#ffffff\",\"strokeWidth\":1},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"3\",\"type\":\"filters\",\"schema\":\"columns\",\"params\":{\"filters\":[{\"input\":{\"query\":{\"query_string\":{\"query\":\"keystone_during_uptime:100\",\"analyze_wildcard\":true}}},\"label\":\"Keystone\"},{\"input\":{\"query\":{\"query_string\":{\"query\":\"nova_during_uptime:100\",\"analyze_wildcard\":true}}},\"label\":\"Nova\"},{\"input\":{\"query\":{\"query_string\":{\"query\":\"swift_during_uptime:100\",\"analyze_wildcard\":true}}},\"label\":\"Swift\"}]}}],\"listeners\":{}}",
+      "title": "Swift status Log",
+      "visState": "{\"title\":\"Swift Status Log\",\"type\":\"line\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"showCircles\":true,\"smoothLines\":false,\"interpolate\":\"linear\",\"scale\":\"linear\",\"drawLinesBetweenPoints\":true,\"radiusRatio\":9,\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"min\",\"schema\":\"metric\",\"params\":{\"field\":\"status\"}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"timestamp\",\"interval\":\"m\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}}],\"listeners\":{}}",
       "uiStateJSON": "{}",
       "description": "",
       "version": 1,
       "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"osa_onmetal_upgrade_test\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}},\"filter\":[]}"
+        "searchSourceJSON": "{\"index\":\"osa_onmetal_upgrade_status_log\",\"query\":{\"query_string\":{\"query\":\"service: swift\",\"analyze_wildcard\":true}},\"filter\":[]}"
       }
     }
   },
   {
-    "_id": "API-High-Level-Results",
+    "_id": "Nova-status-Log",
     "_type": "visualization",
     "_source": {
-      "title": "API High Level Results",
-      "visState": "{\"title\":\"API High Level Results\",\"type\":\"heatmap\",\"params\":{\"color\":\"RdYlGn\",\"columnAxis\":{\"filterBy\":0,\"title\":\"filters\"},\"legendNumberFormat\":\"number\",\"legendTitle\":\"Count\",\"margin\":{\"bottom\":100,\"left\":100,\"right\":200,\"top\":20},\"numberOfColors\":\"4\",\"padding\":\"0.2\",\"rowAxis\":{\"filterBy\":0,\"title\":\"\"},\"stroke\":\"#ffffff\",\"strokeWidth\":1},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"3\",\"type\":\"filters\",\"schema\":\"columns\",\"params\":{\"filters\":[{\"input\":{\"query\":{\"query_string\":{\"query\":\"nova_api_uptime:100\",\"analyze_wildcard\":true}}},\"label\":\"Nova\"},{\"input\":{\"query\":{\"query_string\":{\"query\":\"swift_api_uptime:100\",\"analyze_wildcard\":true}}},\"label\":\"Swift\"}]}}],\"listeners\":{}}",
+      "title": "Nova status Log",
+      "visState": "{\"title\":\"Keystone status Log\",\"type\":\"line\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"showCircles\":true,\"smoothLines\":false,\"interpolate\":\"linear\",\"scale\":\"linear\",\"drawLinesBetweenPoints\":true,\"radiusRatio\":9,\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"min\",\"schema\":\"metric\",\"params\":{\"field\":\"status\"}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"timestamp\",\"interval\":\"m\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}}],\"listeners\":{}}",
       "uiStateJSON": "{}",
       "description": "",
       "version": 1,
       "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"osa_onmetal_upgrade_test\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}},\"filter\":[]}"
+        "searchSourceJSON": "{\"index\":\"osa_onmetal_upgrade_status_log\",\"query\":{\"query_string\":{\"query\":\"service: nova\",\"analyze_wildcard\":true}},\"filter\":[]}"
       }
     }
   },
   {
-    "_id": "Persistence-Object-Storage-Results",
+    "_id": "Keystone-status-Log",
     "_type": "visualization",
     "_source": {
-      "title": "Persistence Object Storage Results",
-      "visState": "{\"title\":\"Persistence Object Storage Results\",\"type\":\"heatmap\",\"params\":{\"color\":\"RdYlGn\",\"columnAxis\":{\"filterBy\":0,\"title\":\"filters\"},\"legendNumberFormat\":\"number\",\"legendTitle\":\"Count\",\"margin\":{\"bottom\":100,\"left\":100,\"right\":200,\"top\":20},\"numberOfColors\":\"4\",\"padding\":\"0.2\",\"rowAxis\":{\"filterBy\":0,\"title\":\"\"},\"stroke\":\"#ffffff\",\"strokeWidth\":1},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"3\",\"type\":\"filters\",\"schema\":\"columns\",\"params\":{\"filters\":[{\"input\":{\"query\":{\"query_string\":{\"query\":\"object_storage_create:1\",\"analyze_wildcard\":true}}},\"label\":\"Create\"},{\"input\":{\"query\":{\"query_string\":{\"query\":\"object_storage_before-validate:1\",\"analyze_wildcard\":true}}},\"label\":\"Before\"},{\"input\":{\"query\":{\"query_string\":{\"query\":\"object_storage_after-validate:1\",\"analyze_wildcard\":true}}},\"label\":\"After\"},{\"input\":{\"query\":{\"query_string\":{\"query\":\"object_storage_cleanup: 1\",\"analyze_wildcard\":true}}},\"label\":\"Cleanup\"}]}}],\"listeners\":{}}",
+      "title": "Keystone status Log",
+      "visState": "{\"title\":\"Swift status Log\",\"type\":\"line\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"showCircles\":true,\"smoothLines\":false,\"interpolate\":\"linear\",\"scale\":\"linear\",\"drawLinesBetweenPoints\":true,\"radiusRatio\":9,\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"min\",\"schema\":\"metric\",\"params\":{\"field\":\"status\"}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"timestamp\",\"interval\":\"m\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"osa_onmetal_upgrade_status_log\",\"query\":{\"query_string\":{\"query\":\"service: keystone\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "OSA-OnMetal-Upgrade",
+    "_type": "visualization",
+    "_source": {
+      "title": "OSA OnMetal Upgrade",
+      "visState": "{\"title\":\"Select Run (Required)\",\"type\":\"markdown\",\"params\":{\"markdown\":\"PLEASE SELECT A RUN\"},\"aggs\":[],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "Please-select-a-run-for-accurate-results.-Runs-are-in-descending-order-(last-run-is-first).",
+    "_type": "visualization",
+    "_source": {
+      "title": "Please select a run for accurate results.  Runs are in descending order (last run is first).",
+      "visState": "{\"title\":\"Please select a run for accurate results.  Runs are in descending order (last run is first).\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false},\"aggs\":[{\"id\":\"2\",\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"done_time\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"9\",\"customLabel\":\"Done Time\"}},{\"id\":\"10\",\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"smoke_before_success_pct\",\"customLabel\":\"Smoke Pre-Test %\"}},{\"id\":\"11\",\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"smoke_after_success_pct\",\"customLabel\":\"Smoke Post Test %\"}},{\"id\":\"3\",\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"keystone_during_uptime\",\"customLabel\":\"Keystone During %\"}},{\"id\":\"4\",\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"swift_during_uptime\",\"customLabel\":\"Swift During %\"}},{\"id\":\"5\",\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"nova_during_uptime\",\"customLabel\":\"Nova During %\"}},{\"id\":\"6\",\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"nova_api_uptime\",\"customLabel\":\"Nova API %\"}},{\"id\":\"8\",\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"swift_api_uptime\",\"customLabel\":\"Swift API %\"}},{\"id\":\"9\",\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"done_time\",\"customLabel\":\"Done Time\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{\"spy\":{\"mode\":{\"name\":null,\"fill\":false}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"osa_onmetal_upgrade_test\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "Number-of-Runs-being-Measured",
+    "_type": "visualization",
+    "_source": {
+      "title": "Number of Runs being Measured",
+      "visState": "{\"title\":\"Number of Runs being Measured\",\"type\":\"metric\",\"params\":{\"handleNoResults\":true,\"fontSize\":\"60\"},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"SELECT 1 RUN FOR ACCURACY\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"osa_onmetal_upgrade_test\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "Smoke-Test",
+    "_type": "visualization",
+    "_source": {
+      "title": "Smoke Test",
+      "visState": "{\"title\":\"Smoke Test\",\"type\":\"heatmap\",\"params\":{\"color\":\"RdYlGn\",\"columnAxis\":{\"filterBy\":0,\"title\":\"filters\"},\"legendNumberFormat\":\"number\",\"legendTitle\":\"Successful Runs\",\"margin\":{\"bottom\":100,\"left\":100,\"right\":200,\"top\":20},\"numberOfColors\":\"4\",\"padding\":\"0.2\",\"rowAxis\":{\"filterBy\":0,\"title\":\"\"},\"stroke\":\"#ffffff\",\"strokeWidth\":1},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"Successful Runs\"}},{\"id\":\"3\",\"type\":\"filters\",\"schema\":\"columns\",\"params\":{\"filters\":[{\"input\":{\"query\":{\"query_string\":{\"query\":\"smoke_before_failures_total: 0\",\"analyze_wildcard\":true}}},\"label\":\"Before\"},{\"input\":{\"query\":{\"query_string\":{\"query\":\"smoke_after_failures_total: 0\",\"analyze_wildcard\":true}}},\"label\":\"After\"}]}}],\"listeners\":{}}",
       "uiStateJSON": "{}",
       "description": "",
       "version": 1,
@@ -522,7 +158,7 @@
     "_type": "visualization",
     "_source": {
       "title": "Persistence Compute Results",
-      "visState": "{\"title\":\"Persistence Compute Results\",\"type\":\"heatmap\",\"params\":{\"color\":\"RdYlGn\",\"columnAxis\":{\"filterBy\":0,\"title\":\"filters\"},\"legendNumberFormat\":\"number\",\"legendTitle\":\"Count\",\"margin\":{\"bottom\":100,\"left\":100,\"right\":200,\"top\":20},\"numberOfColors\":\"4\",\"padding\":\"0.2\",\"rowAxis\":{\"filterBy\":0,\"title\":\"\"},\"stroke\":\"#ffffff\",\"strokeWidth\":1},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"3\",\"type\":\"filters\",\"schema\":\"columns\",\"params\":{\"filters\":[{\"input\":{\"query\":{\"query_string\":{\"query\":\"compute_resources_create:1\",\"analyze_wildcard\":true}}},\"label\":\"Create\"},{\"input\":{\"query\":{\"query_string\":{\"query\":\"compute_resources_before-validate:1\",\"analyze_wildcard\":true}}},\"label\":\"Before\"},{\"input\":{\"query\":{\"query_string\":{\"query\":\"compute_resources_after-validate:1\",\"analyze_wildcard\":true}}},\"label\":\"After\"},{\"input\":{\"query\":{\"query_string\":{\"query\":\"compute_resources_cleanup: 1\",\"analyze_wildcard\":true}}},\"label\":\"Cleanup\"}]}}],\"listeners\":{}}",
+      "visState": "{\"title\":\"Persistence Compute Results\",\"type\":\"heatmap\",\"params\":{\"color\":\"RdYlGn\",\"columnAxis\":{\"filterBy\":0,\"title\":\"filters\"},\"legendNumberFormat\":\"number\",\"legendTitle\":\"Successful Runs\",\"margin\":{\"bottom\":100,\"left\":100,\"right\":200,\"top\":20},\"numberOfColors\":\"4\",\"padding\":\"0.2\",\"rowAxis\":{\"filterBy\":0,\"title\":\"\"},\"stroke\":\"#ffffff\",\"strokeWidth\":1},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"Successful Runs\"}},{\"id\":\"3\",\"type\":\"filters\",\"schema\":\"columns\",\"params\":{\"filters\":[{\"input\":{\"query\":{\"query_string\":{\"query\":\"compute_resources_create:1\",\"analyze_wildcard\":true}}},\"label\":\"Create\"},{\"input\":{\"query\":{\"query_string\":{\"query\":\"compute_resources_before-validate:1\",\"analyze_wildcard\":true}}},\"label\":\"Before\"},{\"input\":{\"query\":{\"query_string\":{\"query\":\"compute_resources_after-validate:1\",\"analyze_wildcard\":true}}},\"label\":\"After\"},{\"input\":{\"query\":{\"query_string\":{\"query\":\"compute_resources_cleanup: 1\",\"analyze_wildcard\":true}}},\"label\":\"Cleanup\"}]}}],\"listeners\":{}}",
       "uiStateJSON": "{}",
       "description": "",
       "version": 1,
@@ -532,11 +168,11 @@
     }
   },
   {
-    "_id": "Smoke-Test",
+    "_id": "Persistence-Object-Storage-Results",
     "_type": "visualization",
     "_source": {
-      "title": "Smoke Test",
-      "visState": "{\"title\":\"Smoke Test\",\"type\":\"heatmap\",\"params\":{\"color\":\"RdYlGn\",\"columnAxis\":{\"filterBy\":0,\"title\":\"filters\"},\"legendNumberFormat\":\"number\",\"legendTitle\":\"Failed Runs\",\"margin\":{\"bottom\":100,\"left\":100,\"right\":200,\"top\":20},\"numberOfColors\":\"4\",\"padding\":\"0.2\",\"rowAxis\":{\"filterBy\":0,\"title\":\"\"},\"stroke\":\"#ffffff\",\"strokeWidth\":1},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"Failed Runs\"}},{\"id\":\"3\",\"type\":\"filters\",\"schema\":\"columns\",\"params\":{\"filters\":[{\"input\":{\"query\":{\"query_string\":{\"query\":\"smoke_before_failures_total: 1\",\"analyze_wildcard\":true}}},\"label\":\"Before\"},{\"input\":{\"query\":{\"query_string\":{\"query\":\"smoke_after_failures_total: 1\",\"analyze_wildcard\":true}}},\"label\":\"After\"}]}}],\"listeners\":{}}",
+      "title": "Persistence Object Storage Results",
+      "visState": "{\"title\":\"Persistence Object Storage Results\",\"type\":\"heatmap\",\"params\":{\"color\":\"RdYlGn\",\"columnAxis\":{\"filterBy\":0,\"title\":\"filters\"},\"legendNumberFormat\":\"number\",\"legendTitle\":\"Successful Runs\",\"margin\":{\"bottom\":100,\"left\":100,\"right\":200,\"top\":20},\"numberOfColors\":\"4\",\"padding\":\"0.2\",\"rowAxis\":{\"filterBy\":0,\"title\":\"\"},\"stroke\":\"#ffffff\",\"strokeWidth\":1},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"Successful Runs\"}},{\"id\":\"3\",\"type\":\"filters\",\"schema\":\"columns\",\"params\":{\"filters\":[{\"input\":{\"query\":{\"query_string\":{\"query\":\"object_storage_create:1\",\"analyze_wildcard\":true}}},\"label\":\"Create\"},{\"input\":{\"query\":{\"query_string\":{\"query\":\"object_storage_before-validate:1\",\"analyze_wildcard\":true}}},\"label\":\"Before\"},{\"input\":{\"query\":{\"query_string\":{\"query\":\"object_storage_after-validate:1\",\"analyze_wildcard\":true}}},\"label\":\"After\"},{\"input\":{\"query\":{\"query_string\":{\"query\":\"object_storage_cleanup: 1\",\"analyze_wildcard\":true}}},\"label\":\"Cleanup\"}]}}],\"listeners\":{}}",
       "uiStateJSON": "{}",
       "description": "",
       "version": 1,
@@ -546,11 +182,39 @@
     }
   },
   {
-    "_id": "Test-Results",
+    "_id": "During-High-Level-Results",
     "_type": "visualization",
     "_source": {
-      "title": "Test Results",
-      "visState": "{\"title\":\"Test Results\",\"type\":\"markdown\",\"params\":{\"markdown\":\"Please investigate areas that are RED.  These may have failures during the upgrade.  If everything is red then you may want to check that your pre-smoke test ran okay.\\n\\nTo filter by the last run, hit the arrow on the last run in the search list.  \\n\\n          Click the magnifying glass with a plus (+) near the field \\\"_id\\\".\"},\"aggs\":[],\"listeners\":{}}",
+      "title": "During High Level Results",
+      "visState": "{\"title\":\"During High Level Results\",\"type\":\"heatmap\",\"params\":{\"color\":\"RdYlGn\",\"columnAxis\":{\"filterBy\":0,\"title\":\"filters\"},\"legendNumberFormat\":\"number\",\"legendTitle\":\"Successful Runs\",\"margin\":{\"bottom\":100,\"left\":100,\"right\":200,\"top\":20},\"numberOfColors\":\"4\",\"padding\":\"0.2\",\"rowAxis\":{\"filterBy\":0,\"title\":\"\"},\"stroke\":\"#ffffff\",\"strokeWidth\":1},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"Successful Runs\"}},{\"id\":\"3\",\"type\":\"filters\",\"schema\":\"columns\",\"params\":{\"filters\":[{\"input\":{\"query\":{\"query_string\":{\"query\":\"keystone_during_uptime:100\",\"analyze_wildcard\":true}}},\"label\":\"Keystone\"},{\"input\":{\"query\":{\"query_string\":{\"query\":\"nova_during_uptime:100\",\"analyze_wildcard\":true}}},\"label\":\"Nova\"},{\"input\":{\"query\":{\"query_string\":{\"query\":\"swift_during_uptime:100\",\"analyze_wildcard\":true}}},\"label\":\"Swift\"}]}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"osa_onmetal_upgrade_test\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "API-High-Level-Results",
+    "_type": "visualization",
+    "_source": {
+      "title": "API High Level Results",
+      "visState": "{\"title\":\"API High Level Results\",\"type\":\"heatmap\",\"params\":{\"color\":\"RdYlGn\",\"columnAxis\":{\"filterBy\":0,\"title\":\"filters\"},\"legendNumberFormat\":\"number\",\"legendTitle\":\"Successful Runs\",\"margin\":{\"bottom\":100,\"left\":100,\"right\":200,\"top\":20},\"numberOfColors\":\"4\",\"padding\":\"0.2\",\"rowAxis\":{\"filterBy\":0,\"title\":\"\"},\"stroke\":\"#ffffff\",\"strokeWidth\":1},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"Successful Runs\"}},{\"id\":\"3\",\"type\":\"filters\",\"schema\":\"columns\",\"params\":{\"filters\":[{\"input\":{\"query\":{\"query_string\":{\"query\":\"nova_api_uptime:100\",\"analyze_wildcard\":true}}},\"label\":\"Nova\"},{\"input\":{\"query\":{\"query_string\":{\"query\":\"swift_api_uptime:100\",\"analyze_wildcard\":true}}},\"label\":\"Swift\"}]}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"osa_onmetal_upgrade_test\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "Please-see-below-for-downtime-specifics",
+    "_type": "visualization",
+    "_source": {
+      "title": "Please see below for downtime specifics",
+      "visState": "{\"title\":\"Please see below for downtime specifics\",\"type\":\"html\",\"params\":{\"html\":\"<!DOCTYPE html>\\n<html>\\n<head>\\n<style>\\nbody {background-color: powderblue;}\\nh2   {color: red;}\\np    {color: red;}\\n</style>\\n</head>\\n<body>\\n\\n<center><h2>Status Logs Section</h2></center>\\n\"},\"aggs\":[],\"listeners\":{}}",
       "uiStateJSON": "{}",
       "description": "",
       "version": 1,
@@ -560,11 +224,11 @@
     }
   },
   {
-    "_id": "Number-of-Runs-being-Measured",
+    "_id": "During-Tests-Results",
     "_type": "visualization",
     "_source": {
-      "title": "Number of Runs being Measured",
-      "visState": "{\"title\":\"New Visualization\",\"type\":\"metric\",\"params\":{\"handleNoResults\":true,\"fontSize\":60},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"Runs\"}}],\"listeners\":{}}",
+      "title": "During Tests Results",
+      "visState": "{\"title\":\"During Tests Results\",\"type\":\"metric\",\"params\":{\"handleNoResults\":true,\"fontSize\":60},\"aggs\":[{\"id\":\"3\",\"type\":\"min\",\"schema\":\"metric\",\"params\":{\"field\":\"nova_during_uptime\",\"customLabel\":\"Nova Uptime %\"}},{\"id\":\"2\",\"type\":\"min\",\"schema\":\"metric\",\"params\":{\"field\":\"swift_during_uptime\",\"customLabel\":\"Swift Uptime %\"}},{\"id\":\"1\",\"type\":\"min\",\"schema\":\"metric\",\"params\":{\"field\":\"keystone_during_uptime\",\"customLabel\":\"Keystone Uptime %\"}}],\"listeners\":{}}",
       "uiStateJSON": "{}",
       "description": "",
       "version": 1,
@@ -574,16 +238,16 @@
     }
   },
   {
-    "_id": "test_vis",
+    "_id": "Status-Embed",
     "_type": "visualization",
     "_source": {
-      "title": "Action Time Plus Count",
-      "visState": "{\"title\":\"New Visualization\",\"type\":\"line\",\"params\":{\"addLegend\":true,\"addTimeMarker\":false,\"addTooltip\":true,\"defaultYExtents\":false,\"drawLinesBetweenPoints\":true,\"interpolate\":\"linear\",\"radiusRatio\":9,\"scale\":\"linear\",\"setYExtents\":false,\"shareYAxis\":true,\"showCircles\":true,\"smoothLines\":false,\"times\":[],\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"action_time\",\"interval\":5,\"extended_bounds\":{}}}],\"listeners\":{}}",
+      "title": "Status Embed",
+      "visState": "{\"title\":\"Status Embed\",\"type\":\"html\",\"params\":{\"html\":\"<center><iframe src=\\\"kibana#/dashboard/Status-Dash?embed=true&_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-1y%2Fy,mode:quick,to:now))&_a=(filters:!(),options:(darkTheme:!t),panels:!((col:3,id:Keystone-status-Log,panelIndex:1,row:3,size_x:9,size_y:2,type:visualization),(col:3,id:Nova-status-Log,panelIndex:2,row:1,size_x:9,size_y:2,type:visualization),(col:3,id:Swift-status-Log,panelIndex:3,row:5,size_x:9,size_y:2,type:visualization),(col:12,id:Time-Widget,panelIndex:4,row:1,size_x:1,size_y:6,type:visualization),(col:1,id:Keystone-Success-%25,panelIndex:5,row:3,size_x:2,size_y:2,type:visualization),(col:1,id:Nova-Success-%25,panelIndex:6,row:1,size_x:2,size_y:2,type:visualization),(col:1,id:Swift-Success-%25,panelIndex:7,row:5,size_x:2,size_y:2,type:visualization)),query:(query_string:(analyze_wildcard:!t,query:'*')),title:'Status%20Dash',uiState:(P-1:(vis:(legendOpen:!f)),P-2:(vis:(legendOpen:!f)),P-3:(vis:(legendOpen:!f)),P-5:(vis:(colors:('status:1':%23890F02),legendOpen:!f)),P-6:(spy:(mode:(fill:!f,name:!n)),vis:(legendOpen:!f)),P-7:(spy:(mode:(fill:!f,name:!n)),vis:(colors:('status:1':%23629E51),legendOpen:!f))))\\\" height=\\\"675\\\" width=\\\"1100\\\"></iframe></center>\"},\"aggs\":[],\"listeners\":{}}",
       "uiStateJSON": "{}",
       "description": "",
       "version": 1,
       "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"metrics_data\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}},\"filter\":[]}"
+        "searchSourceJSON": "{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}},\"filter\":[]}"
       }
     }
   }

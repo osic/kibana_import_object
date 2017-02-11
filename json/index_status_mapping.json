@@ -1,0 +1,12 @@
+{
+ "mappings" : {
+  "_default_" : {
+   "properties" : {
+    "done_time": { "type" : "date",  "index" : "not_analyzed" },
+    "timestamp": { "type" : "date",  "index" : "not_analyzed" },
+    "service": {"type" : "string",  "index" : "not_analyzed" },
+    "status": { "type" : "integer",  "index" : "not_analyzed" }
+   }
+  }
+ }
+}
